@@ -12,7 +12,7 @@ const Update = () => {
         photo: "",
       });
 
-      const [uploadedImage , setUploadedImage]=
+      const [uploadedImage , setUploadedImage]=useState(null)
       useEffect(() => {
         const fetchData = async () => {
           await axios

@@ -1,25 +1,31 @@
 //librarite
-const express = require('express')
-const app = express()
-const mongoose = require('mongoose')
-const cors = require('cors')
-const session = require('express-session')
+let express = require("express");
+let cors = require("cors");
+let mongoose = require("mongoose");
+let session = require("express-session");
+let contactRoute = require("./routes/contactRoute.js");
+let itemRoute = require("./routes/itemRoute.js");
+const path = require("path");
 
 //Konfigurime
-app.use(cors(
-    {
+let app = express();
+app.use(
+  cors({
     credentials: true,
     origin: "http://localhost:3000",
     exposedHeaders: ["set-cookie"],
-    }))
-    app.use(session({
+  })
+);
+app.use(
+  session({
     secret: "This will be secret",
     resave: false,
     saveUninitialized: true,
-    cookie: {maxAge: 1000 * 60 * 60 * 24}
-    }))
-    app.use(express.json({ limit: "1000mb", extended: true }));
-    app.use("./images",express.staticc(path.join(_dirname, "/images")));
+    cookie: { maxAge: 1000 * 60 * 60 * 24 },
+  })
+);
+app.use(express.json({ limit: "1000mb", extended: true }));
+app.use("/images", express.static(path.join(__dirname, "/images")));
 
 
  // Lidhja me databazën
@@ -28,11 +34,13 @@ mongoose.connect('mongodb+srv://esileka:esimongodbleka@cluster0.oclpm.mongodb.ne
     .catch((err) => console.log("Something is wrong", err))
 
 
-    // Testimi
-app.use('/', (req, res) => {
-    res.send("Hello Node!")
-    })
+    app.use(contactRoute);
+app.use(itemRoute);
 
-    // Server
-app.listen(5000, () => {
-    console.log("Server created!")})
+app.use("/send", (req, res) => {
+  res.send("Hello");
+});
+
+app.listen(5000, (req, res) => {
+  console.log("Server start!");
+});
