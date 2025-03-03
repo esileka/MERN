@@ -37,7 +37,7 @@ const ReadOne = () => {
           <Button variant="danger" onClick={() => handlDelete(item._id)}>
             Delete
           </Button>
-          <Button variant="warning">Update</Button>
+          <Button variant="warning" href={`/update/${item._id}/`} >Update</Button>
         </Col>
       </Row>
     </Container>
