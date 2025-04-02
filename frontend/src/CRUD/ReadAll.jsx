@@ -17,8 +17,6 @@ useEffect(()=>{
 
 }, []);
 
-
-
 return(
     <Container>
         <h1>ReadAll</h1>
@@ -37,6 +35,10 @@ return (
           <Button variant="primary" href={`/readOne/${item._id}`}>
             Read more
           </Button>
+          {/* Butoni për Update */}
+          <Button variant="warning" href={`/update/${item._id}`} className="mt-2">
+          Update
+        </Button>
         </Card.Body>
       </Card>
     </Col>

@@ -1,29 +1,37 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Contact from "./Contact";
-import Create from "./CRUD/Create";
+import React from 'react';
 import { Routes, Route } from "react-router-dom";
-import NotFound from "./NotFound";
 import NavigationBar from "./NavigationBar";
 import Footer from "./Footer";
 import Home from "./Home";
-import ReadAll from "./CRUD/ReadAll";
-import ReadOne from "./CRUD/ReadOne";
-import Update from "./CRUD/Update";
+import AboutUs from "./AboutUs";
+import Services from "./Services";
+import Dishes from "./Dishes";
+import MenuPage from "./MenuPage";
+import Contact from "./Contact";
+
+// CRUD components
+import NotFound from "./NotFound";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
   return (
     <div>
       <NavigationBar />
       <Routes>
+        {/* Routes për faqet kryesore */}
         <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/create" element={<Create />} />
-        <Route path="/readAll" element={<ReadAll />} />
-        <Route path="/readOne/:id" element={<ReadOne />} />
-        <Route path="/update/:id" element={<Update/>} />
+        <Route path="/aboutUs" element={<AboutUs />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/reservation" element={<Contact/>} />
+        <Route path="/dishes" element={<Dishes />} />
+        <Route path="/menu/:id" element={<MenuPage />} />
+        <Route path="/allContacts" element={<Contact/>} />
 
+        {/* Route për faqe që nuk ekzistojnë */}
         <Route path="*" element={<NotFound />} />
       </Routes>
+
       <Footer />
     </div>
   );

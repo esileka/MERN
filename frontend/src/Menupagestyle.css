@@ -1,0 +1,79 @@
+/* Styling për MenuPage */
+.menu-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.menu-title {
+    font-size: 2.5rem;
+    color: #04305b;
+    margin-bottom: 15px;
+}
+
+.menu-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.menu-description {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.ingredients-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #f3584a;
+}
+
+.ingredients-list {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left;
+}
+
+.ingredient-item {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+.menu-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #04305b;
+}
+
+/* Responsivitet */
+@media (max-width: 320px) {
+    .menu-container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .menu-title {
+        font-size: 1.8rem; 
+    }
+
+    .menu-description {
+        font-size: 1rem; 
+    }
+
+    .ingredients-title {
+        font-size: 1.3rem; 
+    }
+
+    .ingredient-item {
+        font-size: 1rem; 
+    }
+
+    .menu-price {
+        font-size: 1.2rem; 
+    }
+}

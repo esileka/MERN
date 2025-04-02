@@ -1,0 +1,83 @@
+/* Komponentet */
+.footer-components {
+  background: linear-gradient(135deg, #f5f5f5, #e0e0e0); 
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #333; 
+  border-top: 5px solid #ff6600; 
+}
+
+/* Footer Container */
+.footer-cmp {
+  max-width: 1200px; 
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Titulli */
+.footer-cmp h5 {
+  font-size: 20px;
+  font-weight: bolder;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+ /* paragrafet */
+.footer-cmp p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+.footer-cmp .text {
+  color: #333; 
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* efekti hover mbi tekst */
+.footer-cmp .text:hover {
+  color: #ff6600; 
+}
+
+/* Ikonat  */
+.footer-cmp .text-white {
+  font-size: 20px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.footer-cmp .text-white:hover {
+  color: #ff6600; 
+}
+
+
+.footer-cmp .text-center p {
+  font-size: 14px;
+  color: #333;
+  margin-top: 20px;
+}
+
+
+/* Responsivitet */
+@media (max-width: 230px) {
+  .footer-cmp {
+    width: 100%;
+      padding: 15px 5px; 
+  }
+  .footer-cmp h5 {
+      font-size: 16px;
+  }
+  .footer-cmp p {
+      font-size: 12px;
+  }
+  .footer-cmp .text {
+      font-size: 10px;
+  }
+  .footer-cmp .text-white {
+      font-size: 16px;
+  }
+}

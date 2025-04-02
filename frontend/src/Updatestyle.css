@@ -1,0 +1,90 @@
+.update-container{
+    max-width: 500px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.name-container{
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+/* Titulli */
+.update-container h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #04305b;
+    margin-bottom: 20px;
+  }
+   /* Input-et dhe textarea */
+  .update-container .form-control {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    font-size: 14px;
+    
+  }
+  
+  .update-container .form-control:focus {
+    border-color: #f3584a;
+    box-shadow: 0 0 8px rgba(255, 111, 97, 0.3);
+    outline: none;
+  }
+  
+  /* Butoni Submit */
+  .update-container .btn-primary {
+    background:  #ff6f61;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s;
+    color: white;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+  }
+  
+  .update-container .btn-primary:hover {
+    background:  #ff3d6d;
+    transform: scale(1.03);
+  }
+  
+  /* Mesazhi i suksesit */
+  .update-container .alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+ /* Responsiviteti */
+  @media (max-width: 320px) {
+    .update-container {
+        width: 90%; 
+        padding: 15px; 
+    }
+
+    .update-container h1 {
+        font-size: 22px; 
+    }
+
+    .update-container .form-control {
+        padding: 8px;
+        font-size: 12px; 
+    }
+
+    .update-container .btn-primary {
+        padding: 10px 15px; 
+        font-size: 14px; 
+    }
+}

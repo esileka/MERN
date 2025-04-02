@@ -3,8 +3,8 @@ const contactModel = require("../models/contact.js")
 
 const app = express()
 
-// Krijoni (kaloni info nga front tek back)
-// perdoret metoda post
+
+// metoda post
 app.post('/addContact', async(req,res)=>{
     try{
         console.log(req.body)
@@ -17,6 +17,28 @@ app.post('/addContact', async(req,res)=>{
         console.log("Contact not saved ", err)
         res.status(500).send("Contact not saved ", err)
     }
-})
+});
+
+app.put("/updateContact/:id", async (req, res) => {
+  try {
+    console.log(req);
+    const updatedContact = await contactModel.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    res.status(200).send(updatedContact);
+  } catch (err) {
+    console.log("Gabim gjatë përditësimit të kontaktit:", err);
+    res.status(500).send("Gabim gjatë përditësimit");
+  }
+});
+
+// GET => Leximi i të gjitha pjatave
+app.get("/allContacts", async (req, res) => {
+    try {
+      const contacts = await contactModel.find({});
+      res.status(200).send(contacts);
+    } catch (err) {
+      console.log("Gabim gjatë leximit të rezervimeve:", err);
+      res.status(500).send("Gabim gjatë leximit të rezervimeve");
+    }
+  });
 
 module.exports = app

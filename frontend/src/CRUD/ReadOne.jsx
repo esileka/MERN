@@ -39,6 +39,7 @@ const ReadOne = () => {
           </Button>
           <Button variant="warning" href={`/update/${item._id}/`} >Update</Button>
         </Col>
+
       </Row>
     </Container>
   );

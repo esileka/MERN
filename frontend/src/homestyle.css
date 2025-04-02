@@ -1,0 +1,140 @@
+/* Importo Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@400;700&display=swap');
+
+.hero-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    padding: 100px 5%;
+    background: linear-gradient(135deg, #f9f9f9, #ffffff); 
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Pjesa e tekstit dhe imazheve */
+.text-image {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.text-image h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    color: #8B0000;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.text-image h1:hover {
+    transform: scale(1.1);
+}
+
+/* Pjesa qendrore me tekst */
+.center-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem;
+    color: #8B0000;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.center-text h1:hover {
+    transform: scale(1.1);
+}
+
+/* imazhet */
+.food-img, .food-imgs {
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efekti hover per imaxhet */
+.food-img:hover, .food-imgs:hover {
+    transform: rotate(3deg) scale(1.1);
+    box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+
+.logo-img {
+    width: 150px;
+    height: 150px; 
+    border-radius: 50%; 
+    background-color: #f0f0f0; 
+    padding: 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    opacity: 1; 
+}
+
+/* Responsivitet  */
+@media (max-width: 320px) {
+    .hero-container {
+        flex-direction: column; 
+        padding: 50px 10px; 
+    }
+
+    .text-image {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    .text-image h1 {
+        font-size: 3rem; 
+    }
+
+    /* Teksti qendror */
+    .center-text h1 {
+        font-size: 4rem; 
+    }
+
+    /* Imazhet */
+    .food-img, .food-imgs {
+        width: 250px; 
+        height: auto;
+        border-radius: 15px; 
+    }
+
+    .food-img:hover, .food-imgs:hover {
+        transform: rotate(0deg) scale(1.05); 
+        box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3); 
+    }
+
+    /* Logoja ne pozicion te majte */
+    .logo {
+        position: absolute; 
+        top: 10px;
+        left: 10px;
+        z-index: 1;
+    }
+
+    .logo-img {
+        width: 60px; 
+        height:60px; 
+        border-radius: 50%;
+        padding: 10px; 
+        background-color: #f0f0f0; 
+        margin-top:0px;
+    }
+}
+
+
+

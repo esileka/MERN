@@ -1,0 +1,67 @@
+/* Css per imazhet */
+.menu-img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+/* efekti hover*/
+.menu-img:hover {
+    transform: scale(1.07); 
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+}
+/* Titulli*/
+.card-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff6b00; 
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+/* Pershkrimi (DESC) */
+.card-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #555; 
+    text-align: center;
+    padding: 5px 10px;
+    line-height: 1.6;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.card-text:hover {
+    transform: scale(1.05); 
+    color: #333; 
+}
+
+
+/* Responsiviteti  */
+@media (max-width: 320px) {
+    /* Per imazhet */
+    .menu-img {
+      max-width: 100%; 
+      height: auto;
+      border-radius: 5px; 
+    }
+  
+    /* Titulli i kartelës */
+    .card-title {
+      font-size: 16px; 
+      text-align: left; 
+      letter-spacing: 1px; 
+    }
+  
+    /* Përshkrimi i kartes */
+    .card-text {
+      font-size: 12px; 
+      text-align: left; 
+      padding: 3px; 
+      line-height: 1.4; 
+    }
+    
+    .menu-img:hover {
+      transform: scale(1.05); 
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    }
+  }

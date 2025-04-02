@@ -1,0 +1,88 @@
+.sticky-navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030; 
+  background: rgba(255, 255, 255, 0.9); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: all 0.3s ease-in-out;
+  
+}
+body {
+    padding-top: 70px; 
+  }
+
+
+  /*  logo */
+  .navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+    color: #eb650c;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-brand:hover {
+    color: orangered;
+  }
+
+  /* Stilizim per Butonin "OUR MENU */
+  .btn-outline-success {
+    color: #ff6600;
+    border-color: #ff6600;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .btn-outline-success:hover {
+    background-color: #ff6600;
+    color: white;
+    border-color: #ff6600;
+  }
+
+  /* Responsivitet */
+  @media (max-width: 320px) {
+    /* madhesina e navbar-it */
+    .sticky-navbar {
+      padding: 5px 10px;
+    }
+  
+    /* Madhesia e logos */
+    .navbar-brand {
+      font-size: 20px;
+    }
+  
+   
+    .navbar-toggler {
+      padding: 3px 6px;
+      font-size: 14px;
+      display: block; 
+      border: none;
+      background: none;
+    }
+    .navbar-toggler-icon {
+      background-color: transparent; 
+    }
+  
+    
+    .nav-components {
+      flex-direction: column;
+      text-align: center;
+      padding-top: 10px;
+    }
+  
+    .nav-components .nav-link {
+      font-size: 13px;
+      padding: 5px;
+    }
+  
+    /* Butoni "OUR MENU" */
+    .btn-outline-success {
+      display: block;
+      width: 95%;
+      margin: 5px auto;
+      font-size: 12px;
+      padding: 4px;
+    }
+  }
